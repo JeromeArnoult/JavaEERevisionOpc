@@ -14,23 +14,23 @@
 	<%@ include file = "menu.jsp" %>
 	
 		<p>
-			Hello Mojito & Margaritas !! 
+			Bonjour ${ auteur.prenom}, ${ auteur.nom }
 		</p>
-		
 		<p>
-			<%
-				String variable = (String) request.getAttribute("variable");
-				out.println(variable);
-			%>
+			${ auteur.actif ? 'Vous êtes très actif ! ' : 'Vous êtes inactif !'}
 		</p>
 		
+		<!--
+		<p>
+			Bonjour ${ noms[1]}
+		</p>
 		<p>
 			<%
 				for (int i = 0 ; i < 20 ; i++) {
-					out.println("Une margaritas ! <br>");
+					out.println("Bonjour ! <br>");
 				}
 			%>
-		</p>
+		</p>-->
 
 </body>
 </html>

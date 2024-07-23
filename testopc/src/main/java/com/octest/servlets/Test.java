@@ -6,6 +6,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+import com.octest.beans.Auteur;
+
 /**
  * Servlet implementation class Test
  */
@@ -23,8 +25,21 @@ public class Test extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String message ="Au revoir mes amis";
-		request.setAttribute("variable", message);
+		/*Test de récupération d'un paramètre via l'URL
+		String name = request.getParameter("name");
+		request.setAttribute("name", name);
+		String[] noms = {"Bob", "Roxy", "Jake"};
+		request.setAttribute("noms", noms);*/
+		
+		//Test avec un objet (beans)
+		Auteur auteur = new Auteur();
+		auteur.setPrenom("Jérôme");
+		auteur.setNom("Marchand");
+		auteur.setActif(true);
+		
+		//On envoi l'objet à le Jsp
+		request.setAttribute("auteur", auteur);
+		
 		this.getServletContext().getRequestDispatcher("/WEB-INF/bonjour.jsp").forward(request, response);
 	}
 
