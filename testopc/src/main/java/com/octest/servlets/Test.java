@@ -25,11 +25,11 @@ public class Test extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		/*Test de récupération d'un paramètre via l'URL
+		//Test de récupération d'un paramètre via l'URL
 		String name = request.getParameter("name");
 		request.setAttribute("name", name);
 		String[] noms = {"Bob", "Roxy", "Jake"};
-		request.setAttribute("noms", noms);*/
+		request.setAttribute("noms", noms);
 		
 		//Test avec un objet (beans)
 		Auteur auteur = new Auteur();
@@ -39,14 +39,20 @@ public class Test extends HttpServlet {
 		
 		//On envoi l'objet à le Jsp
 		request.setAttribute("auteur", auteur);
-		
+		//Test array jstl
+		String[] titres = {"Nouvel incendie", "Une île a été découverte", "Chute du dollar"};
+		request.setAttribute("titres", titres);
 		this.getServletContext().getRequestDispatcher("/WEB-INF/bonjour.jsp").forward(request, response);
 	}
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		
+		String nom = request.getParameter("nom");
+		
+		request.setAttribute("nom", nom);
+		
+		this.getServletContext().getRequestDispatcher("/WEB-INF/bonjour.jsp").forward(request, response);
 	}
 
 }
