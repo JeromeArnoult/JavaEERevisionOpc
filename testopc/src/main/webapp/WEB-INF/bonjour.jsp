@@ -17,10 +17,17 @@
 
 	<%@ include file = "menu.jsp" %>
 	
-		  <p>
+		 <p>
 			Bonjour ${ auteur.prenom}, ${ auteur.nom }
 			
 		</p>
+		
+		<c:if test="${ !empty sessionScope.prenom && !empty sessionScope.nom }">
+	
+			<p>Vous êtes ${sessionScope.prenom } ${sessionScope.nom} !</p>
+	
+	
+		</c:if>
 		
 			<!--   JSTL et variable -->
 			 <p><c:out value="${ variable }"> Valeur par defaut </c:out></p>

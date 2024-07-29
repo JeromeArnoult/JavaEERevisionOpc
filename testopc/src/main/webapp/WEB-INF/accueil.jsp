@@ -12,12 +12,21 @@
 	<%@ include file = "menu.jsp" %>
 	<h1>Bienvenu sur ma page d'accueil !</h1>
 	
+		<h3>Ici on peut upload un fichier sur le server ^^</h3>
+	
 	<!-- Formulaire -->
     <c:if test="${ !empty fichier }">
 	    <p>
 	    	<c:out value="Le fichier ${ fichier } (${ description }) a été uploadé !" />
 	    </p>
     </c:if>
+    
+    <c:if test="${ !empty sessionScope.prenom && !empty sessionScope.nom }">
+	
+		<p>Vous êtes ${sessionScope.prenom } ${sessionScope.nom} !</p>
+	
+	
+	</c:if>
     
     <form method="post" action="accueil" enctype="multipart/form-data">
          <p>

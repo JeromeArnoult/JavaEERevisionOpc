@@ -1,25 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-		xmlns="https://jakarta.ee/xml/ns/jakartaee" 
-		xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" 
-version="6.0">
-  <servlet>
-  
-    <description></description>
-    <display-name>Test</display-name>
-    <servlet-name>Test</servlet-name>
-    <servlet-class>com.octest.servlets.Test</servlet-class>
-    <multipart-config>
-            <location>/Users/jerom\fichierstmp/</location> <!-- A adapter chez vous -->
-            <max-file-size>10485760</max-file-size> <!-- 10 Mo -->
-            <max-request-size>52428800</max-request-size> <!-- 5 x 10 Mo -->
-            <file-size-threshold>1048576</file-size-threshold> <!-- 1 Mo -->
-        </multipart-config>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>Test</servlet-name>
-    <url-pattern>/bonjour</url-pattern>
-  </servlet-mapping>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" version="6.0">
   <display-name>testopc</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
@@ -29,20 +9,4 @@ version="6.0">
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  <servlet>
-    <description></description>
-    <display-name>Accueil</display-name>
-    <servlet-name>Accueil</servlet-name>
-    <servlet-class>com.octest.servlets.Accueil</servlet-class>
-  </servlet>
-  
-  
-  
-  
-  <servlet-mapping>
-    <servlet-name>Accueil</servlet-name>
-    <url-pattern>/</url-pattern>
-  </servlet-mapping>
-   
-  
 </web-app>

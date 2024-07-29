@@ -4,6 +4,7 @@
     		
     		<ul>
     			<li><a href = "/testopc/">Accueil</a></li>
-                <li><a href = "/testopc/bonjour">Bonjour</a></li>
-                <li>Page3</li>
+                <li><a href = "/testopc/bonjour">Page des tests !</a></li>
+                <li><a href = "/testopc/session">Session</a></li>
+                <li><a href = "/testopc/cookie">Cookie</a></li>
     		</ul>
