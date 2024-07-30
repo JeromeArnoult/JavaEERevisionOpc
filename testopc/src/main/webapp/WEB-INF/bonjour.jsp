@@ -16,6 +16,7 @@
 <body>
 
 	<%@ include file = "menu.jsp" %>
+	<h1>Bienvenue sur la Page des tests</h1>
 	
 		 <p>
 			Bonjour ${ auteur.prenom}, ${ auteur.nom }

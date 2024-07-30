@@ -7,4 +7,5 @@
                 <li><a href = "/testopc/bonjour">Page des tests !</a></li>
                 <li><a href = "/testopc/session">Session</a></li>
                 <li><a href = "/testopc/cookie">Cookie</a></li>
+                 <li><a href = "/testopc/sql">DataBase</a></li>
     		</ul>

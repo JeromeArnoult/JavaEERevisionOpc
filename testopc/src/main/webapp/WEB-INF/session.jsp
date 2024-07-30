@@ -18,7 +18,7 @@
 	
 	
 	</c:if>
-	
+	<h1>Test de session</h1>
    <form method="post" action="session">
          <p>
             <label for="nom">Nom : </label>
